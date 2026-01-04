@@ -53,8 +53,6 @@ with gr.Blocks() as demo:
     gr.Markdown("## 🛡️ CivicShield – Digital Rights Risk Analyzer")
     gr.Markdown("Upload a PDF or paste text. Files are **not stored**.")
 
-    text_input = gr.Textbox(lines=10, label="Paste document text")
-
     pdf_input = gr.File(file_types=[".pdf"], label="Upload PDF document")
 
     region = gr.Dropdown(["Nigeria", "Kenya", "UK", "Global South"], label="Region")
@@ -73,7 +71,7 @@ with gr.Blocks() as demo:
 
     analyze_btn.click(
         run_full_analysis,
-        inputs=[text_input, pdf_input, region, activism],
+        inputs=[pdf_input, region, activism],
         outputs=[risks_out, clauses_out, summary_out, actions_out],
     )
 
