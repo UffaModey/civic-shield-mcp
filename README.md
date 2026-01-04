@@ -19,6 +19,5 @@ CivicShield MCP helps activists understand risk before harm happens.
 
 ### Core Stack
 
-- **FastAPI**: Orchestrates tools, handles tool routing, and exposes an API.
-- **Hugging Face**: Hosts the open-source LLM for analysis.
+- **FastMCP**: Orchestrates tools, handles tool routing, and exposes LLM API.
 - **Gradio**: Provides a user-friendly frontend for activists.
